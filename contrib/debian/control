@@ -1,0 +1,68 @@
+Source: zeroone
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@zeroone.org>
+Uploaders: Holger Schinzel <holger@zeroone.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.zeroone.org/
+Vcs-Git: git://github.com/zeroonecoin/zeroone.git
+Vcs-Browser: https://github.com/zeroonecoin/zeroone
+
+Package: zerooned
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ ZeroOne is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. ZeroOne uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. ZeroOne Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, zerooned, and the CLI tool
+ zeroone-cli to interact with the daemon.
+
+Package: zeroone-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ ZeroOne is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. ZeroOne uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. ZeroOne Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides ZeroOne-Qt, a GUI for ZeroOne based on Qt.
+
+Package: zeroone-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ ZeroOne is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. ZeroOne uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. ZeroOne Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides zeroone-tx, a command-line transaction creation
+ tool which can be used without a zeroone daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
