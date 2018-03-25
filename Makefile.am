@@ -7,6 +7,7 @@ GZIP_ENV="-9n"
 if BUILD_BITCOIN_LIBS
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libbitcoinconsensus.pc
+libbitcoinconsensus_la_LDFLAGS = -no-undefined
 endif
 
 BITCOIND_BIN=$(top_builddir)/src/zerooned$(EXEEXT)
